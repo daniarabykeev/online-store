@@ -1,13 +1,14 @@
 {
   "products": [
     {
-      "category": "",
-      "title": "",
-      "price": "",
-      "image1": "",
-      "image2": "",
-      "image3": "",
-      "description": "",
+      "category": "phones",
+      "title": "iphone 14 pro max",
+      "price": "1200",
+      "image1": "https://images.unsplash.com/photo-1664478546384-d57ffe74a78c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aXBob25lJTIwMTQlMjBwcm8lMjBtYXh8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
+      "image2": "https://images.unsplash.com/photo-1663373460363-448cf1bf9402?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aXBob25lJTIwMTQlMjBwcm8lMjBtYXh8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
+      "image3": "https://images.unsplash.com/photo-1668158873373-919c5da95c99?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGlwaG9uZSUyMDE0JTIwcHJvJTIwbWF4fGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=400&q=60",
+      "description1": "model of 2022",
+      "description2": "The iPhone 14 Pro Max display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.69 inches diagonally (actual viewable area is less). Both models: Dynamic Island.",
       "id": 1
     }
   ]
