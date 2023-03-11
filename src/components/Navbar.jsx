@@ -177,12 +177,6 @@ export default function Navbar() {
             >
               <HomeIcon />
             </NavLink>
-            <NavLink
-              to="/add"
-              style={{ color: "white", fontSize: "16px", margin: "10px 5px" }}
-            >
-              <AddCircleOutlineIcon style={{ marginLeft: "30px" }} />
-            </NavLink>
           </Box>
           <Search style={{ marginLeft: "500px" }}>
             <SearchIconWrapper>
@@ -225,7 +219,7 @@ export default function Navbar() {
               <AccountCircle />
             </IconButton>
           </Box>
-          <Box sx={{ display: { xs: "flex", md: "none" } }}>
+          {/* <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="show more"
@@ -236,7 +230,7 @@ export default function Navbar() {
             >
               <MoreIcon />
             </IconButton>
-          </Box>
+          </Box> */}
         </Toolbar>
       </AppBar>
       {renderMobileMenu}

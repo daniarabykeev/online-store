@@ -36,11 +36,36 @@ function ProductContext({ children }) {
     getProducts();
   }
 
+  async function deleteProduct(id) {
+    await axios.delete(`${API}/${id}`);
+    getProducts();
+  }
+
+  async function getOneProduct(id) {
+    const { data } = await axios(`${API}/${id}`);
+    dispatch({
+      type: ACTIONS.GET_ONE_PRODUCT,
+      payload: data,
+    });
+  }
+
+  async function editProduct(id, newProduct) {
+    await axios.patch(`${API}/${id}`, newProduct);
+    getProducts();
+  }
+
+  // async function editProduct(id, newProduct){
+  //   await
+  // }
+
   const value = {
     products: state.products,
     oneProduct: state.oneProduct,
     getProducts: getProducts,
     addProduct: addProduct,
+    deleteProduct: deleteProduct,
+    getOneProduct: getOneProduct,
+    editProduct: editProduct,
   };
   return (
     <productContext.Provider value={value}>{children}</productContext.Provider>

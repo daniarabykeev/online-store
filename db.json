@@ -1,15 +1,24 @@
 {
   "products": [
     {
-      "category": "phones",
       "title": "iphone 14 pro max",
       "price": "1200",
       "image1": "https://images.unsplash.com/photo-1664478546384-d57ffe74a78c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aXBob25lJTIwMTQlMjBwcm8lMjBtYXh8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
-      "image2": "https://images.unsplash.com/photo-1663373460363-448cf1bf9402?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aXBob25lJTIwMTQlMjBwcm8lMjBtYXh8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
-      "image3": "https://images.unsplash.com/photo-1668158873373-919c5da95c99?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGlwaG9uZSUyMDE0JTIwcHJvJTIwbWF4fGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=400&q=60",
-      "description1": "model of 2022",
-      "description2": "The iPhone 14 Pro Max display has rounded corners that follow a beautiful curved design...., and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.69 inches diagonally (actual viewable area is less). Both models: Dynamic Island.",
+      "image2": "https://images.unsplash.com/photo-1672617195423-5458a5210e01?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8aXBob25lJTIwMTQlMjBwcm8lMjBtYXh8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
+      "image3": "https://images.unsplash.com/photo-1667380649409-0ba925fbaa9a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGlwaG9uZSUyMDE0JTIwcHJvJTIwbWF4fGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=400&q=60",
+      "description1": "new model of 2022",
+      "description2": "The iPhone 14 Pro Max display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.69 inches diagonally (actual viewable area is less). Both models: Dynamic Island. The iPhone 14 Pro and 14 Pro Max have now launched the action mode, designed to capture clear, high-quality videos with just one hand – even when the person recording is moving around. The phone debuts a new processor – the A16 Bionic – and offers four potential storage options: 128 GB, 256 GB, 512 GB and 1TB.",
       "id": 1
+    },
+    {
+      "title": "tre",
+      "price": "777999",
+      "image1": "https://static.toiimg.com/thumb/resizemode-4,msid-86550242,imgsize-49546,width-720/86550242.jpg",
+      "image2": "https://images.unsplash.com/photo-1663373460363-448cf1bf9402?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aXBob25lJTIwMTQlMjBwcm8lMjBtYXh8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
+      "image3": "https://images.hindustantimes.com/tech/img/2021/09/24/original/iPhone_13_Pro_Max_(4)_1632469213724.jpg",
+      "description1": "model of 2023",
+      "description2": "model of 2022lkjhghjklitkyujtyhrg",
+      "id": 2
     }
   ]
 }
