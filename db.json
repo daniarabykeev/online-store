@@ -2,7 +2,7 @@
   "products": [
     {
       "title": "iphone 14 pro max",
-      "price": "1200",
+      "price": "1300",
       "image1": "https://images.unsplash.com/photo-1664478546384-d57ffe74a78c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aXBob25lJTIwMTQlMjBwcm8lMjBtYXh8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
       "image2": "https://images.unsplash.com/photo-1672617195423-5458a5210e01?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8aXBob25lJTIwMTQlMjBwcm8lMjBtYXh8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
       "image3": "https://images.unsplash.com/photo-1667380649409-0ba925fbaa9a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGlwaG9uZSUyMDE0JTIwcHJvJTIwbWF4fGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=400&q=60",
@@ -12,7 +12,7 @@
     },
     {
       "title": "tre",
-      "price": "777999",
+      "price": "777997",
       "image1": "https://static.toiimg.com/thumb/resizemode-4,msid-86550242,imgsize-49546,width-720/86550242.jpg",
       "image2": "https://images.unsplash.com/photo-1663373460363-448cf1bf9402?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aXBob25lJTIwMTQlMjBwcm8lMjBtYXh8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
       "image3": "https://images.hindustantimes.com/tech/img/2021/09/24/original/iPhone_13_Pro_Max_(4)_1632469213724.jpg",

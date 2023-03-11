@@ -14,11 +14,50 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import { ExpandMore } from "@mui/icons-material";
 import { productContext } from "../contexts/ProductContext";
 import { useNavigate } from "react-router-dom";
+import { Menu, MenuItem } from "@mui/material";
+import ModalDetails from "./ModalDetails";
 
 function ProductCard({ item }) {
-  const [expanded, setExpanded] = React.useState(false);
   const navigate = useNavigate();
+  const [expanded, setExpanded] = React.useState(false);
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const isMenuOpen = Boolean(anchorEl);
 
+  const handleProfileMenuOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
+  const menuId = "primary-product-settings-menu";
+
+  const renderMenu = (
+    <Menu
+      anchorEl={anchorEl}
+      anchorOrigin={{
+        vertical: "top",
+        horizontal: "right",
+      }}
+      id={menuId}
+      keepMounted
+      transformOrigin={{
+        vertical: "top",
+        horizontal: "right",
+      }}
+      open={isMenuOpen}
+      onClose={handleMenuClose}
+    >
+      <MenuItem>
+        <ModalDetails item={item} />
+      </MenuItem>
+      {/* <button>
+        <ModalDetails />
+      </button> */}
+      <MenuItem onClick={(e) => navigate(`/edit/${item.id}`)}>
+        Edit product
+      </MenuItem>
+    </Menu>
+  );
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
@@ -28,13 +67,13 @@ function ProductCard({ item }) {
     <Card sx={{ maxWidth: 345, margin: "30px auto" }}>
       <CardHeader
         action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon
-              onClick={(e) => {
-                navigate(`/edit/${item.id}`);
-              }}
-            />
-            {/* <button>edit</button> */}
+          <IconButton
+            aria-controls={menuId}
+            aria-haspopup="true"
+            onClick={handleProfileMenuOpen}
+            aria-label="settings"
+          >
+            <MoreVertIcon />
           </IconButton>
         }
         title={item.title}
@@ -91,6 +130,7 @@ function ProductCard({ item }) {
           <Typography paragraph>{item.description2}</Typography>
         </CardContent>
       </Collapse>
+      {renderMenu}
     </Card>
   );
 }

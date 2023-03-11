@@ -172,9 +172,10 @@ function HomePage() {
             </form>
           </div>
         </div>
+
         {products.map((item) => {
           return (
-            <div style={{ marginRight: "30px" }}>
+            <div key={item.id} style={{ marginRight: "30px" }}>
               <ProductCard key={item.id} item={item} />
             </div>
           );

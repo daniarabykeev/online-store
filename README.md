@@ -1,3 +1,13 @@
 # My online-shop project
 
-# check
+# simple online-shop
+
+---
+
+# Features
+
+- Get products
+- Add products in modal window
+- Delete products
+- Edit products
+- View more details in modal window
