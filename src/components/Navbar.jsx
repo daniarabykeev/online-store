@@ -17,7 +17,7 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import HomeIcon from "@mui/icons-material/Home";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
-import { NavLink } from "react-router-dom";
+import { NavLink, useSearchParams } from "react-router-dom";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -60,6 +60,19 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function Navbar() {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [input, setInput] = React.useState(
+    searchParams.get("title_like") || ""
+  );
+
+  React.useEffect(() => {
+    let obj = Object.fromEntries([...searchParams]);
+    setSearchParams({
+      ...obj,
+      title_like: input,
+    });
+  }, [input]);
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -183,6 +196,10 @@ export default function Navbar() {
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
+              value={input}
+              onChange={(e) => {
+                setInput(e.target.value);
+              }}
               placeholder="Search…"
               inputProps={{ "aria-label": "search" }}
             />

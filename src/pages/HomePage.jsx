@@ -44,7 +44,7 @@ function HomePage() {
   const [product, setProduct] = useState(init);
 
   const [searchParams, setSearchParams] = useSearchParams();
-  const [page, setPage] = useState(searchParams.get("_page") || 1);
+  const [page, setPage] = useState(+searchParams.get("_page") || 1);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -68,6 +68,7 @@ function HomePage() {
   useEffect(() => {
     if (page) {
       setSearchParams({
+        title_like: searchParams.get("title_like") || "",
         _page: page,
         _limit: LIMIT,
       });
