@@ -16,6 +16,8 @@ import { productContext } from "../contexts/ProductContext";
 import { useNavigate } from "react-router-dom";
 import { Menu, MenuItem } from "@mui/material";
 import ModalDetails from "./ModalDetails";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import { cartContext } from "../contexts/CartContext";
 
 function ProductCard({ item }) {
   const navigate = useNavigate();
@@ -63,6 +65,7 @@ function ProductCard({ item }) {
   };
 
   const { deleteProduct } = useContext(productContext);
+  const { cart, getCart, addProductToCart } = useContext(cartContext);
   return (
     <Card sx={{ maxWidth: 345, margin: "30px auto" }}>
       <CardHeader
@@ -106,7 +109,11 @@ function ProductCard({ item }) {
         sx={{ display: "flex", justifyContent: "space-between" }}
       >
         <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
+          <AddShoppingCartIcon
+            onClick={() => {
+              addProductToCart(item);
+            }}
+          />
         </IconButton>
         <IconButton
           onClick={(e) => {

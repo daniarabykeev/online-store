@@ -4,7 +4,6 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
 import Badge from "@mui/material/Badge";
 import MenuItem from "@mui/material/MenuItem";
@@ -14,10 +13,10 @@ import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import MoreIcon from "@mui/icons-material/MoreVert";
 import HomeIcon from "@mui/icons-material/Home";
-import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
-import { NavLink, useSearchParams } from "react-router-dom";
+import { Link, NavLink, useNavigate, useSearchParams } from "react-router-dom";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import { cartContext } from "../contexts/CartContext";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -64,6 +63,7 @@ export default function Navbar() {
   const [input, setInput] = React.useState(
     searchParams.get("title_like") || ""
   );
+  const { cart } = React.useContext(cartContext);
 
   React.useEffect(() => {
     let obj = Object.fromEntries([...searchParams]);
@@ -92,9 +92,9 @@ export default function Navbar() {
     handleMobileMenuClose();
   };
 
-  const handleMobileMenuOpen = (event) => {
-    setMobileMoreAnchorEl(event.currentTarget);
-  };
+  // const handleMobileMenuOpen = (event) => {
+  //   setMobileMoreAnchorEl(event.currentTarget);
+  // };
 
   const menuId = "primary-search-account-menu";
   const renderMenu = (
@@ -211,9 +211,11 @@ export default function Navbar() {
               aria-label="show 4 new mails"
               color="inherit"
             >
-              <Badge badgeContent={4} color="error">
-                <MailIcon />
-              </Badge>
+              <IconButton component={Link} to="/cart">
+                <Badge badgeContent={cart.products.length} color="error">
+                  <AddShoppingCartIcon />
+                </Badge>
+              </IconButton>
             </IconButton>
             <IconButton
               size="large"
@@ -236,18 +238,6 @@ export default function Navbar() {
               <AccountCircle />
             </IconButton>
           </Box>
-          {/* <Box sx={{ display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
-            </IconButton>
-          </Box> */}
         </Toolbar>
       </AppBar>
       {renderMobileMenu}

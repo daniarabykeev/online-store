@@ -3,5 +3,6 @@ export const ACTIONS = {
   GET_PRODUCTS: "GET_PRODUCTS",
   GET_ONE_PRODUCT: "GET_ONE_PRODUCT",
   GET_PAGES: "GET_PAGES",
+  GET_CART: "GET_CART",
 };
 export const LIMIT = 3;

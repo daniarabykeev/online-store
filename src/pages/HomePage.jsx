@@ -39,7 +39,7 @@ function HomePage() {
   function handleClose(e) {
     document.getElementById("my-modal").classList.remove("open");
   }
-  const { products, getProducts, addProduct, deleteProduct, pageTotalCount } =
+  const { products, getProducts, addProduct, pageTotalCount } =
     useContext(productContext);
   const [product, setProduct] = useState(init);
 
