@@ -11,3 +11,5 @@
 - Delete products
 - Edit products
 - View more details in modal window
+- Pagination
+- Search products
