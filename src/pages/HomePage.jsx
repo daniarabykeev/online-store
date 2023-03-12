@@ -5,6 +5,11 @@ import { productContext } from "../contexts/ProductContext";
 import CloseIcon from "@mui/icons-material/Close";
 import "./HomePage.css";
 import ProductCard from "../components/ProductCard";
+import { Grid } from "@mui/material";
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
+import { useSearchParams } from "react-router-dom";
+import { LIMIT } from "../helpers/consts";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -34,9 +39,12 @@ function HomePage() {
   function handleClose(e) {
     document.getElementById("my-modal").classList.remove("open");
   }
-  const { products, getProducts, addProduct, deleteProduct } =
+  const { products, getProducts, addProduct, deleteProduct, pageTotalCount } =
     useContext(productContext);
   const [product, setProduct] = useState(init);
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [page, setPage] = useState(searchParams.get("_page") || 1);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -55,9 +63,23 @@ function HomePage() {
 
   useEffect(() => {
     getProducts();
-  }, []);
+  }, [searchParams]);
+
+  useEffect(() => {
+    if (page) {
+      setSearchParams({
+        _page: page,
+        _limit: LIMIT,
+      });
+    }
+  }, [page]);
   return (
-    <div style={{ marginLeft: "30px", marginTop: "30px" }}>
+    <div
+      style={{
+        marginLeft: "30px",
+        marginTop: "30px",
+      }}
+    >
       <button
         onClick={(e) => {
           handleOpen(e);
@@ -176,11 +198,24 @@ function HomePage() {
         {products.map((item) => {
           return (
             <div key={item.id} style={{ marginRight: "30px" }}>
-              <ProductCard key={item.id} item={item} />
+              <Grid item xs={12} sm={6} md={4}>
+                <ProductCard key={item.id} item={item} />
+              </Grid>
             </div>
           );
         })}
       </div>
+      <Stack spacing={2} sx={{ display: "flex", margin: "0 auto" }}>
+        <Pagination
+          count={pageTotalCount}
+          page={page}
+          variant="outlined"
+          shape="rounded"
+          onChange={(e, value) => {
+            setPage(value);
+          }}
+        />
+      </Stack>
     </div>
   );
 }

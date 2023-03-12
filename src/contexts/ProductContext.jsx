@@ -1,13 +1,8 @@
 import axios from "axios";
 import React, { createContext, useReducer } from "react";
-import { ACTIONS, API } from "../helpers/consts";
+import { ACTIONS, API, LIMIT } from "../helpers/consts";
 
 export const productContext = createContext();
-
-const initialState = {
-  products: [],
-  oneProduct: null,
-};
 
 function reducer(state, action) {
   switch (action.type) {
@@ -15,19 +10,33 @@ function reducer(state, action) {
       return { ...state, products: action.payload };
     case ACTIONS.GET_ONE_PRODUCT:
       return { ...state, oneProduct: action.payload };
+    case ACTIONS.GET_PAGES:
+      return { ...state, pageTotalCount: action.payload };
     default:
       return state;
   }
 }
 
+const initialState = {
+  products: [],
+  oneProduct: null,
+  pageTotalCount: 1,
+};
+
 function ProductContext({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   async function getProducts() {
-    const { data } = await axios(API);
+    const res = await axios(`${API}${window.location.search}`);
+    const count = res.headers[["x-total-count"]];
+    const pageTotalCount = Math.ceil(count / LIMIT);
     dispatch({
       type: ACTIONS.GET_PRODUCTS,
-      payload: data,
+      payload: res.data,
+    });
+    dispatch({
+      type: ACTIONS.GET_PAGES,
+      payload: pageTotalCount,
     });
   }
 
@@ -61,6 +70,7 @@ function ProductContext({ children }) {
   const value = {
     products: state.products,
     oneProduct: state.oneProduct,
+    pageTotalCount: state.pageTotalCount,
     getProducts: getProducts,
     addProduct: addProduct,
     deleteProduct: deleteProduct,

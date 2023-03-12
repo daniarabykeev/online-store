@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "title": "iphone 14 pro max",
+      "title": "iphone 14 pro",
       "price": "1300",
       "image1": "https://images.unsplash.com/photo-1664478546384-d57ffe74a78c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aXBob25lJTIwMTQlMjBwcm8lMjBtYXh8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
       "image2": "https://images.unsplash.com/photo-1672617195423-5458a5210e01?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8aXBob25lJTIwMTQlMjBwcm8lMjBtYXh8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
@@ -19,6 +19,36 @@
       "description1": "model of 2023",
       "description2": "model of 2022lkjhghjklitkyujtyhrg",
       "id": 2
+    },
+    {
+      "title": "Samsung s23 Ultra",
+      "price": "1100",
+      "image1": "https://images.unsplash.com/photo-1610792516307-ea5acd9c3b00?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2Ftc3VuZyUyMHBob25lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60",
+      "image2": "https://images.unsplash.com/photo-1609252925148-b0f1b515e111?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c2Ftc3VuZyUyMHBob25lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60",
+      "image3": "https://images.unsplash.com/photo-1623593476267-c7e98d1fb572?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHNhbXN1bmclMjBwaG9uZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60",
+      "description1": " In Galaxy, S23 Ultra not only the volume",
+      "description2": " Ease of Use. With its 6.8-inch screen, the Samsung Galaxy S23 Ultra is one of the largest phones currently on the market - some might even consider it to be a “phablet” thanks to how big it is.  Samsung Galaxy S23 Ultra Specs Released. Feb 17, 2023. Display. 6.8 inches. 3088 x 1440 pixels. 120Hz Refresh rate. Camera. 200 MP (Quad camera) 12 MP front. Hardware. Qualcomm Snapdragon 8 Gen 2. 8GB RAM. Storage. 256GB, not expandable. Battery. 5000 mAh. OS. Android 13.",
+      "id": 3
+    },
+    {
+      "title": "One Plus",
+      "price": "700",
+      "image1": "https://images.unsplash.com/photo-1616332544207-7f3888d0373a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8b25lcGx1c3xlbnwwfDB8MHx8&auto=format&fit=crop&w=400&q=60",
+      "image2": "https://images.unsplash.com/photo-1614399113305-a127bb2ca893?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fG9uZXBsdXN8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
+      "image3": "https://images.unsplash.com/photo-1618493624693-b9e51e72a719?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fG9uZXBsdXN8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
+      "description1": "Flagman's killer",
+      "description2": "Smartphones. OnePlus releases two lines of smartphones: its flagship \"OnePlus\" line, and its budget-oriented Nord line. Both lines are equipped with an Android-based operating system known as OxygenOS. OnePlus has also released phones outside of these lines, namely the OnePlus Ace and the OnePlus 10R.",
+      "id": 4
+    },
+    {
+      "title": "Google Pixel 3",
+      "price": "400",
+      "image1": "https://images.unsplash.com/photo-1587840181242-bf05eb933bbc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z29vZ2xlJTIwcGl4ZWx8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
+      "image2": "https://images.unsplash.com/photo-1587840178393-079769787b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Z29vZ2xlJTIwcGl4ZWx8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
+      "image3": "https://images.unsplash.com/photo-1625645805501-c8346568c5f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGdvb2dsZSUyMHBpeGVsfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=400&q=60",
+      "description1": "The best camera on mobile",
+      "description2": " Here's a breakdown of some of best new and updated features in the Pixel 3. Call screen. The call screen option enables Google Assistant to answer an incoming call for you. ... Security. ... Speakers. ... YouTube Music. ... Google Lens. ... Group selfie cam. ... Top shot. ... Playground.",
+      "id": 5
     }
   ]
 }
