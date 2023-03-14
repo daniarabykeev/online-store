@@ -17,6 +17,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import { Link, NavLink, useNavigate, useSearchParams } from "react-router-dom";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { cartContext } from "../contexts/CartContext";
+import { authContext } from "../contexts/AuthContext";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -59,6 +60,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function Navbar() {
+  const navigate = useNavigate();
+  const { user, logout } = React.useContext(authContext);
   const [searchParams, setSearchParams] = useSearchParams();
   const [input, setInput] = React.useState(
     searchParams.get("title_like") || ""
@@ -155,7 +158,11 @@ export default function Navbar() {
         </IconButton>
         <p>Notifications</p>
       </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
+      <MenuItem
+        onClick={(e) => {
+          navigate("/login");
+        }}
+      >
         <IconButton
           size="large"
           aria-label="account of current user"
@@ -217,7 +224,7 @@ export default function Navbar() {
                 </Badge>
               </IconButton>
             </IconButton>
-            <IconButton
+            {/* <IconButton
               size="large"
               aria-label="show 17 new notifications"
               color="inherit"
@@ -225,14 +232,14 @@ export default function Navbar() {
               <Badge badgeContent={17} color="error">
                 <NotificationsIcon />
               </Badge>
-            </IconButton>
+            </IconButton> */}
             <IconButton
               size="large"
               edge="end"
               aria-label="account of current user"
-              aria-controls={menuId}
               aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
+              component={Link}
+              to="/login"
               color="inherit"
             >
               <AccountCircle />

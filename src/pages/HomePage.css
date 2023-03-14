@@ -44,4 +44,5 @@
 
 .modal.open .modal__box {
   transform: scale(1);
+  background-color: rgba(54, 102, 207, 0.3);
 }

@@ -76,11 +76,10 @@ function ProductCard({ item }) {
             onClick={handleProfileMenuOpen}
             aria-label="settings"
           >
-            ...
             <MoreVertIcon />
           </IconButton>
         }
-        title={item.title.slice(0, 10)}
+        title={item.title.slice(0, 20)}
       />
       <CardMedia
         component="img"

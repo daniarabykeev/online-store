@@ -4,6 +4,7 @@ import MainLayouts from "../layouts/MainLayouts";
 import CartPage from "../pages/CartPage";
 import EditProductPage from "../pages/EditProductPage";
 import HomePage from "../pages/HomePage";
+import LoginPage from "../pages/LoginPage";
 
 function MainRoutes() {
   return (
@@ -13,6 +14,7 @@ function MainRoutes() {
           <Route path="/" element={<HomePage />} />
           <Route path="/edit/:id" element={<EditProductPage />} />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/login" element={<LoginPage />} />
         </Route>
       </Routes>
     </div>
